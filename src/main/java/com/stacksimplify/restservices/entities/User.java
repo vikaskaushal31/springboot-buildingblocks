@@ -3,7 +3,6 @@ package com.stacksimplify.restservices.entities;
 import java.util.List;
 
 import javax.persistence.Column;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,9 +11,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import org.springframework.hateoas.RepresentationModel;
+
 @Entity
 @Table(name = "cust_user")
-public class User {
+public class User extends RepresentationModel {
 	
 	@Id
 	@GeneratedValue
