@@ -29,6 +29,10 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
 
@@ -66,6 +70,11 @@
   			<groupId>com.fasterxml.jackson.dataformat</groupId>
   			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
+		<dependency>
+		    <groupId>de.codecentric</groupId>
+		    <artifactId>spring-boot-admin-starter-client</artifactId>
+		    <version>2.7.5</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -88,6 +97,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+        			<execution>
+            			<id>build-info</id>
+            			<goals>
+                			<goal>build-info</goal>
+            			</goals>
+        			</execution>
+    			</executions>
 			</plugin>
 		</plugins>
 	</build>
